@@ -1,1 +1,3 @@
-# DOcumetation of CIty Search result
+# Documetation of City Search result
+
+## All code in GeoSearch.py
