@@ -1,0 +1,57 @@
+yum install git -y --- installs latest version of git
+git init --- initialize empty repository
+git add filename ---- to add the changes from wsp to sa (track the changes or finalize the changes)
+git commit -m "message" --- to commit the changes  from sa to local repo default master branch
+git config --global user.name username --- to configure username in our machine
+git config --global user.email useremail ---- to configure user email
+git config --global --list  ---- to see the user configured
+git config --global --edit  ------ to reedit the user configured
+git log ---- shows all the commits which have happened in the local repo
+git show commitID ----- shows details of the commit
+git remote add origin origin-url --- configure remote repo in our local repo
+git remote -v  ----- shows configured remote repo url
+git remote show origin ----- shows configured remote repo url
+git remote rm origin --- to delete the origin url
+git push origin master ---- to push the LR commits to RR
+git rm --cached filename --- to move from staging area to wsp
+git restore --staged filename --- same as above
+-----------------------------------------------------------------------------------
+git clone url --- to download the RR with all the history of commits to a machine
+git pull origin master ----- to download the latest changes in RR to LR
+git log -1 --- see latest log
+git log -2 --- see latest 2 commits and so on...
+git log --oneline --- commit id and message in short
+git clean -fd --- to clean the wsp from untracked files/folders
+git checkout filename ----- to revert back to LR file(revert modifed files)
+git commit --amend -m "new message" ----- to change the message of the latest commit
+git commit --amend --author 'authorname <authoreemail>' --- to change author of latest commit
+.gitignore file --- to ignore untracked files and have empty directories
+---------------------------------------------------------------
+git fetch origin master ----- fetch does not download the actual change but the meta data of the change commit
+git diff origin/master --- it gives diff between LR master and RR master branch
+git remote add test URL
+git push test master ---- to push changes to test url
+--------------------git-branch----------------------------------------------
+git branch --- to list the created branches * indicates current branch
+git branch branchname --- created new branch
+git checkout -b branchname ---- creates new branch and switches as well
+git checkout branchname ------ only switches to branch
+git branch -d branchname ---- deletes the branch
+git branch -D branchname ---- forcefully deletes the branch
+git push origin --all ---- to push all the changes of multiple branches
+git push origin branchname --- pushes a particular branch
+git clone URL -b branchname ---- clones particular branch to check cat .git/config
+git clone url foldername -b branchname --- creates a new folder by the givename and clones in it
+git merge dev --- pulling mechnism, here we want to merge dev in master so run the command from master branch
+git merge --abort  ----- to cancel the merge and works in case of conflict only
+-------------------------------------------------------------------------------------
+git reset HEAD~1 --- default mixed to delete local repo changes incase of mixed change is deleted from LR and is in WSP
+git reset HEAD~1 --soft ----- delete from LR , change is in Staging area
+git reset HEAD~1 --hard --- permanantly deletes the change
+git revert commitid --- reverts back change to previous commit
+git tag --- shows tags
+git tag -d tagname --- deletes tag
+git show tagname --- details of tag
+git tag tagname commitID ---- creates a tag by default lightweight tag
+git tag tagname commitid -m "message"  ------ creates heavy tag with extra tagger info
+git push origin --tags --- to push the tags
