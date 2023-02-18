@@ -1,0 +1,6 @@
+we  can use publicly available data on the positions of satellites and your location to calculate which satellites are passing over your location at a given time. Here's some sample Python code that uses the pyorbital library to calculate which satellites are passing over your location in real time:
+
+The code gets the TLE (two-line element) data for a list of weather satellites from the Celestrak website, and then loops through the satellites to calculate their positions using the pyorbital library. It then calculates the distance between each satellite and your location, and prints the names of any satellites that are within 10 degrees of your location.
+
+Note that this code only works if the TLE data for the satellites is up-to-date, and assumes that the satellites are only used for weather monitoring. The positions of military or spy satellites are not publicly available, and it is unlikely that they would be included in publicly available TLE data.
+
